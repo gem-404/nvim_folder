@@ -41,9 +41,6 @@ return packer.startup(function()
   -- Vim fugitive
   use 'tpope/vim-fugitive'
 
-  -- lazygit
-  use 'kdheepak/lazygit.nvim'
-
   -- Autopair
   use {
     'windwp/nvim-autopairs',
@@ -159,7 +156,10 @@ return packer.startup(function()
   -- file navigation
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { { 'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim'}, { "kdheepak/lazygit.nvim" } },
+    config = function()
+        require("telescope").load_extension("lazygit")
+    end,
   }
 
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
