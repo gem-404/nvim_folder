@@ -41,6 +41,9 @@ return packer.startup(function()
   -- Vim fugitive
   use 'tpope/vim-fugitive'
 
+  -- lazygit
+  use 'kdheepak/lazygit.nvim'
+
   -- Autopair
   use {
     'windwp/nvim-autopairs',
@@ -113,37 +116,37 @@ return packer.startup(function()
   use { 'mhinz/vim-startify' }
 
   -- file explorer
-  use {
-    'kyazdani42/nvim-tree.lua',
-    cmd = {
-      'NvimTreeClipboard',
-      'NvimTreeClose',
-      'NvimTreeFindFile',
-      'NvimTreeOpen',
-      'NvimTreeRefresh',
-      'NvimTreeToggle',
-    },
-    event = 'VimEnter',
-  }
+  -- use {
+  --   'kyazdani42/nvim-tree.lua',
+  --   cmd = {
+  --     'NvimTreeClipboard',
+  --     'NvimTreeClose',
+  --     'NvimTreeFindFile',
+  --     'NvimTreeOpen',
+  --     'NvimTreeRefresh',
+  --     'NvimTreeToggle',
+  --   },
+  --   event = 'VimEnter',
+  -- }
 
 
-    use {
-    'neovim/nvim-lspconfig',
-    requires = {
-      { 'b0o/SchemaStore.nvim' },
-      { 'williamboman/nvim-lsp-installer' },
-      { 'jose-elias-alvarez/nvim-lsp-ts-utils' },
-      {
-        'jose-elias-alvarez/null-ls.nvim',
-        after = 'nvim-lspconfig',
-      },
-      {
-        'ray-x/lsp_signature.nvim',
-        after = 'nvim-lspconfig',
-      },
-    },
-    event = 'BufWinEnter',
-  }
+  --   use {
+  --   'neovim/nvim-lspconfig',
+  --   requires = {
+  --     { 'b0o/SchemaStore.nvim' },
+  --     { 'williamboman/nvim-lsp-installer' },
+  --     { 'jose-elias-alvarez/nvim-lsp-ts-utils' },
+  --     {
+  --       'jose-elias-alvarez/null-ls.nvim',
+  --       after = 'nvim-lspconfig',
+  --     },
+  --     {
+  --       'ray-x/lsp_signature.nvim',
+  --       after = 'nvim-lspconfig',
+  --     },
+  --   },
+  --   event = 'BufWinEnter',
+  -- }
 
   -- williamboman/nvim-lsp-installer
   use 'williamboman/nvim-lsp-installer'
