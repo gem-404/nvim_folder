@@ -131,10 +131,8 @@ map("n", "<C-n>", ":CommentToggle<CR>")
 map("v", "<C-n>", ":CommentToggle<CR>")
 
 
-
 map("n", "<C-\\>", [[:terminal<CR>]])
 map("t", "<C-\\>", [[:terminal<CR>]])
-map("t", "<C-n>", [[<C-\><C-n>]])
 
 map("n", "<LEADER>tf", ":lua require('telescope.builtin').find_files{}<CR>")
 map("n", "<LEADER>tg", "<cmd>Telescope live_grep<cr>")
